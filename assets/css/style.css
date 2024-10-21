@@ -1,0 +1,157 @@
+/*
+Theme Name: Zircon - eCommerce HTML Template
+Author: Mate_Themes
+Author URI: https://themeforest.net/user/mate_themes/
+Tags: zircon, ecommerce, store, online-store, html5 template
+Description: zircon - online store HTML5 Template. 
+Version: 1.0.0
+*/
+/************************************** base css **************************************/
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --color-background: #FFEBEB;
+  --color-primary: #C23F3F;
+  --color-heading: #0D0D0D;
+  --color-white: #ffffff;
+  --primary-font: "Jost", sans-serif;
+  --transition-base: 0.3s; }
+
+body {
+  margin: 0;
+  font-family: var(--primary-font);
+  font-weight: 400; }
+
+input {
+  outline: 0; }
+
+select {
+  outline: 0;
+  border: 0; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: var(--transition-base);
+  -o-transition: var(--transition-base);
+  transition: var(--transition-base); }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0; }
+
+button {
+  border: 0;
+  background-color: transparent; }
+
+/******************************* theme css **********************************/
+/******************************** components ******************************/
+.zc_coupon_announce {
+  background: var(--color-background);
+  padding: 12px 12px;
+  overflow: hidden;
+  -webkit-transition: var(--transition-base);
+  -o-transition: var(--transition-base);
+  transition: var(--transition-base); }
+  .zc_coupon_announce p {
+    color: var(--color-primary); }
+  .zc_coupon_announce .zc_announce_close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background: var(--color-primary); }
+  .zc_coupon_announce.off {
+    height: 0;
+    padding: 0; }
+
+.zc_nav_menu ul li {
+  display: inline-block; }
+  .zc_nav_menu ul li a {
+    padding: 38px 24px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-heading);
+    display: inline-block; }
+
+.zc_header_right {
+  gap: 40px; }
+
+.zc_header_cart {
+  position: relative; }
+  .zc_header_cart .zc_cart_count {
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    right: -10px;
+    top: -6px; }
+
+/****************************** page styles ******************************/
+/** hero section **/
+.zc_hero_box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 130px 12px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+  .zc_hero_box .zc_hero_overlay {
+    background: var(--color-heading);
+    z-index: -1;
+    opacity: 0.3; }
+
+.zc_hero_subtitle_wrapper {
+  display: inline-block;
+  padding: 1px; }
+
+.zc_hero_subtitle {
+  display: inline-block;
+  padding: 6px 12px;
+  background: rgba(13, 13, 13, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px; }
+
+.zc_hero_title {
+  font-size: 98px;
+  font-weight: 400;
+  color: var(--color-white);
+  max-width: 660px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  line-height: 1.1em; }
+
+.zc_hero_explore {
+  margin-top: 50px;
+  display: inline-block;
+  position: relative; }
+  .zc_hero_explore svg {
+    width: 200px;
+    background: rgba(13, 13, 13, 0.2);
+    border-radius: 50%;
+    padding: 8px; }
+    .zc_hero_explore svg textPath {
+      font-size: 13.2px;
+      color: var(--color-white);
+      fill: var(--color-white);
+      font-family: var(--primary-font);
+      font-weight: 400; }

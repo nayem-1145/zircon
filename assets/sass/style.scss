@@ -1,0 +1,31 @@
+/*
+Theme Name: Zircon - eCommerce HTML Template
+Author: Mate_Themes
+Author URI: https://themeforest.net/user/mate_themes/
+Tags: zircon, ecommerce, store, online-store, html5 template
+Description: zircon - online store HTML5 Template. 
+Version: 1.0.0
+*/
+
+/************************************** base css **************************************/
+@import 'base/variables';
+@import 'base/mixin';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/spacing';
+
+/******************************* theme css **********************************/
+@import 'theme/theme-class';
+@import 'theme/animations';
+
+
+/******************************** components ******************************/
+@import 'components/header';
+@import 'components/preloader';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/product-cards';
+@import 'components/breadcrumb';
+
+/****************************** page styles ******************************/
+@import 'pages/index-1';
