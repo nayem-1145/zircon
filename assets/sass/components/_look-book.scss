@@ -1,0 +1,554 @@
+/** Look Book **/
+.zc_look_book {
+    .zc_look_single {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: 40px;
+        background-position: center right;
+        position: relative;
+        overflow: hidden;
+
+        @include large-screen {
+            background-position: center left 22%;
+        }
+
+        @include screen-768 {
+            padding: 30px 25px;
+        }
+
+        h3 {
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 57.6px;
+            color: #000;
+            max-width: 280px;
+            width: 100%;
+            margin: 0 0 20px;
+
+            @include screen-768 {
+                font-size: 41px;
+                line-height: 51.6px;
+            }
+        }
+
+        p {
+            line-height: 25.2px;
+            font-weight: 500;
+            margin: 0 0 32px;
+        }
+
+        .blob-btn {
+            padding: 13.5px 22.4px 13.5px;
+
+            &:hover {
+                color: var(--white-color) !important;
+            }
+
+            .blob-btn__inner {
+                background: var(--white-color);
+            }
+        }
+
+        .shop-btn {
+            .blob-btn__inner {
+                background: var(--heading-color);
+
+                .blob-btn__blob {
+                    background: var(--primary-color);
+                }
+            }
+        }
+
+        .discount_badge {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 19.8px;
+            position: absolute;
+            right: 54px;
+            bottom: -19px;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: var(--white-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            @include portrait-phone {
+                right: 24px;
+            }
+        }
+    }
+}
+
+// ZN Lookbook For Home 2
+
+.znLookbkRow {
+    & [class^="col-"]:nth-child(1) {
+        width: 35.607%;
+
+        @include large-screen {
+            width: 34.607%;
+        }
+
+        @include screen-992 {
+            width: 50%;
+        }
+
+        @include screen-768 {
+            width: 100%;
+        }
+    }
+
+    & [class^="col-"]:nth-child(2) {
+        width: 28.788%;
+
+        @include large-screen {
+            width: 30.78%;
+        }
+
+        @include screen-992 {
+            width: 50%;
+        }
+
+        @include screen-768 {
+            width: 100%;
+        }
+    }
+
+    & [class^="col-"]:nth-child(3) {
+        width: 35.607%;
+
+        @include large-screen {
+            width: 34.607%;
+        }
+
+        @include screen-992 {
+            width: 100%;
+        }
+    }
+}
+
+.zn_lookbook_content {
+    @include displayFlex(flex, center, center, column);
+    gap: 30px;
+
+    &>* {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    &.zn_lookbook_cntR {
+        @include screen-992 {
+            flex-direction: row;
+            gap: 24px;
+
+            &>* {
+                flex: 0 0 auto;
+                width: calc(50% - 12px);
+            }
+        }
+
+        @include large-screen {
+            flex-direction: column;
+
+            &>* {
+                flex: 0 0 auto;
+                width: calc(100%);
+            }
+        }
+    }
+}
+
+.zn_lookbook_card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 32px;
+
+    &__cnt {
+        padding: 32px;
+
+        h4 {
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0.06em;
+            color: #0A50A3;
+            margin-bottom: 4px;
+        }
+
+        h3 {
+            font-family: var(--heading-font3);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: left;
+            color: var(--heading-color);
+            margin-bottom: 22px;
+
+            @include large-screen {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+
+        & .zn_primary-btn {
+            border-radius: 8px;
+            background: #0A50A3;
+            color: var(--color-background);
+            font-size: 16px;
+            line-height: 22px;
+            padding: 10px 24px;
+        }
+    }
+}
+
+.zn_lookbook_card_two {
+    padding: 20px;
+    gap: 5px;
+
+    @include large-screen {
+        flex: 0 0 auto;
+        min-height: 230px;
+    }
+
+    @include screen-992 {
+        padding: 34px 30px;
+    }
+
+    @include screen-768 {
+        padding: 25px 30px;
+        justify-content: space-between;
+    }
+
+    @include portrait-phone {
+        padding: 30px;
+    }
+
+    @include screen-460 {
+        padding-left: 10px;
+    }
+
+    &__cnt {
+        @include displayFlex(flex, center, end, column);
+        gap: 0;
+        flex-wrap: nowrap;
+
+        & h4 {
+            color: #EE5937;
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            margin-bottom: 4px;
+        }
+
+        & h3 {
+            font-family: var(--heading-font3);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 38px;
+            color: var(--black-color);
+            margin-bottom: 4px;
+        }
+
+        & p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: var(--body-color2);
+            margin-bottom: 32px;
+        }
+
+        & .zn_primary-btn {
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 10px 24px;
+            background: var(--color-primary-button3);
+        }
+    }
+
+    & .zn_lookbook_card_thumb {
+        @include large-screen {
+            margin-right: -40px;
+        }
+
+        & img {
+            @include large-screen {
+                width: 134px;
+            }
+
+            @include screen-992 {
+                width: auto;
+            }
+        }
+    }
+
+}
+
+.zn_lookbook_card_three {
+
+    @include screen-1320 {
+        max-height: 100%;
+    }
+
+    &__cnt {
+        padding: 32px 32px;
+
+        & h3 {
+            font-family: var(--heading-font3);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: center;
+            color: var(--heading-color);
+            margin-bottom: 20px;
+
+            @include large-screen {
+                font-size: 30px;
+                line-height: 35px;
+            }
+
+            & .special {
+                color: #EE5937;
+                line-height: 48px;
+                margin-bottom: 20px;
+            }
+        }
+
+        & .link_btn {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            color: var(--heading-color);
+            position: relative;
+
+            i {
+                font-size: 14px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 0;
+                bottom: -2px;
+                width: 100%;
+                height: 1px;
+                background: var(--heading-color);
+            }
+
+            &:hover {
+                color: var(--primary-color3);
+
+                &::after {
+                    background: var(--primary-color3);
+                }
+            }
+        }
+    }
+
+    &__thumb {
+        & img {
+            max-width: 100%;
+
+            @include large-screen {
+                max-width: 118.21%;
+            }
+
+            @include screen-992 {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.zn_lookbook_card_four {
+    padding: 32px;
+    @include displayFlex(flex, center, center, column);
+    gap: 0;
+    flex-wrap: nowrap;
+    min-height: 250px;
+
+    @include large-screen {
+        min-height: 230px;
+    }
+
+    &__cnt {
+        h4 {
+            font-family: var(--body-font);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            color: #EE5937;
+            margin: 0;
+        }
+
+        h3 {
+            font-family: var(--heading-font3);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            margin: 0;
+
+            @include screen-1320 {
+                font-size: 30px;
+            }
+
+            @include large-screen {
+                font-size: 24px;
+            }
+
+            @include screen-992 {
+                max-width: 650px;
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.zn_lookbook_card_five {
+    padding: 32px;
+
+    &__cnt {
+        & h4 {
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+            margin-bottom: 4px;
+            color: var(--primary-color3);
+        }
+
+        & h3 {
+            font-family: var(--heading-font3);
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 48px;
+            margin-bottom: 19px;
+            color: var(--black-color);
+
+            @include large-screen {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+
+        & .zn_primary-btn {
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 22px;
+            padding: 10px 24px;
+            background: var(--white-color);
+        }
+    }
+}
+
+
+// Look book Item 03 
+.zc3_lookbk_item {
+    position: relative;
+    background: linear-gradient(180deg, #F1D5C1 0%, rgba(228, 214, 203, 0.2) 100%);
+    border-radius: 4px;
+
+
+    &__content {
+        padding: 56px 35px 35px;
+        text-align: center;
+
+        @include large-screen {
+            padding: 56px 25px 35px;
+        }
+
+        & h3 {
+            font-family: var(--heading-font2);
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 42px;
+            color: var(--primary-color2);
+            margin-bottom: 8px;
+        }
+    }
+
+    &__thumb {
+        position: relative;
+
+        & img {
+            max-width: 100%;
+            width: auto;
+        }
+    }
+
+    .zc_primary_link_btn {
+        border-bottom: 1px solid;
+
+        &:hover {
+            border-color: var(--heading-color);
+            color: var(--heading-color);
+        }
+    }
+}
+
+.zc3_lookbk_item2 {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    border-radius: 4px;
+    min-height: 270px;
+    @include displayFlex(flex, end, start, column);
+
+    @include large-screen {
+        min-height: 217px;
+    }
+
+    @include screen-992 {
+        min-height: 236px;
+    }
+
+    @include screen-768 {
+        min-height: 270px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(77, 13, 7, 0) 22.78%, rgba(77, 13, 7, 0.8) 100%);
+        border-radius: 4px;
+    }
+
+    &__content {
+        padding: 16px;
+    }
+
+    & .blob-btn {
+        padding: 11px 22px 12px;
+        background: var(--white-color);
+        color: var(--primary-color2);
+        border-radius: 2px;
+
+        & .blob-btn__inner {
+            background: var(--white-color);
+        }
+
+        &:hover {
+            color: var(--white-color);
+        }
+    }
+}
+
+.zc3_lookbk_item2.mb-30 {
+    @include large-screen {
+        margin-bottom: 24px;
+    }
+}

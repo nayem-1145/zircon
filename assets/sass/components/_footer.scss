@@ -1,0 +1,706 @@
+.zc_footer_area {
+    background: var(--heading-color);
+
+    .footer_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        border-bottom: 1px solid rgba(255, 255, 255, .10);
+        padding-bottom: 86px;
+        margin-bottom: 96px;
+
+        @include large-screen {
+            padding-bottom: 66px;
+            margin-bottom: 76px;
+        }
+
+        @include screen-460 {
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 124px;
+            font-weight: 400;
+            line-height: 138.6px;
+            color: var(--white-color);
+            text-transform: uppercase;
+
+            @include screen-1400 {
+                font-size: 106px;
+            }
+
+            @include large-screen {
+                font-size: 86px;
+                line-height: 100px;
+            }
+
+            @include screen-992 {
+                font-size: 60px;
+                line-height: 80px;
+            }
+
+            @include screen-768 {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            @include portrait-phone {
+                font-size: 30px;
+                line-height: 40px;
+            }
+        }
+
+        button {
+            img {
+                max-width: 112px;
+                width: 100%;
+                border-radius: 50%;
+                animation: rotate linear 10s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+
+    .zc_footer_widget {
+        @include screen-992 {
+            text-align: left !important;
+            margin: 0 0 40px;
+        }
+
+        .widget_title {
+            margin: 0 0 24px;
+        }
+
+        ul {
+            li {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 25.2px;
+                color: #B6B6B6;
+                margin: 0 0 18px;
+
+                a {
+                    display: inline-block;
+                    color: inherit;
+
+                    &:hover {
+                        color: var(--white-color);
+                    }
+
+                    h3 {
+                        font-size: 24px;
+                        line-height: 28.5px;
+                        color: inherit;
+                        margin: 0;
+                    }
+                }
+
+                p {
+                    margin: 0 0 2px;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+
+        .visit_btn {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.2px;
+            color: #B6B6B6;
+            border-bottom: 2px solid #B6B6B6;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .zc_widget02 {
+        padding-left: 67px;
+
+        @include screen-992 {
+            padding-left: 0;
+        }
+    }
+
+    .zc_widget03 {
+        padding-left: 98px;
+
+        @include screen-992 {
+            padding-left: 0;
+        }
+    }
+
+    .zc_footer_copyright {
+        border-top: 1px solid rgba(255, 255, 255, .10);
+        padding: 24px 0 24px;
+
+        @include screen-992 {
+            text-align: center;
+        }
+
+        p,
+        span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            color: var(--color-link);
+        }
+
+        span {
+            margin-right: 16px;
+        }
+
+        @include screen-992 {
+            p {
+                margin-bottom: 16px !important;
+            }
+        }
+
+    }
+}
+
+// Footer 02
+.zn_footer_section {
+    position: relative;
+    padding-top: 272px;
+    clip-path: url(#footerTp_clip);
+    overflow: hidden;
+}
+
+.zn_footer_top {
+    position: relative;
+}
+
+.zn_footer_shape_01 {
+    position: absolute;
+    top: 188px;
+    left: 62px;
+}
+
+.zn_footer_shape_02 {
+    position: absolute;
+    bottom: -2px;
+    left: 67px;
+
+    @include large-screen {
+        bottom: -10px;
+        left: -10px;
+        width: 80px;
+    }
+}
+
+.zn_footer_shape_03 {
+    position: absolute;
+    bottom: 118px;
+    right: 60px;
+
+    @include large-screen {
+        bottom: 70px;
+        right: 12px;
+    }
+}
+
+.zn_widget_title {
+    font-family: var(--heading-font3);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    color: var(--heading-color);
+    margin-bottom: 24px;
+}
+
+.zc_footerPaymets {
+    position: relative;
+    @include displayFlex(flex, start, center, row);
+    gap: 16px;
+
+    @include large-screen {
+        flex-direction: column;
+        align-items: start;
+        gap: 2px;
+    }
+
+    & label {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        color: var(--color-heading);
+        text-transform: capitalize;
+    }
+
+    & .zc_fPayments {
+        @include displayFlex(flex, space-between, center, row);
+        gap: 16px;
+
+        & a {
+            position: relative;
+            display: inline-block;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.zn_widget_nav {
+    @include displayFlex(flex, start, start, column);
+    gap: 16px;
+
+    & li {
+        & a {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            color: var(--body-color2);
+
+            &:hover {
+                color: var(--primary-color3);
+            }
+        }
+    }
+}
+
+.zn_subscribe_content {
+    & form {
+        max-width: 300px;
+        border: 1px solid #ECE0D0;
+        border-radius: 34px;
+        padding: 3px 3px 3px 24px;
+        margin-bottom: 24px;
+
+        & .emailIntpu {
+            & svg {
+                position: relative;
+                bottom: 2px;
+            }
+
+            input {
+                height: 48px;
+                width: calc(100% - 77px);
+                border: unset;
+                outline: unset;
+                background: transparent;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 22px;
+            }
+        }
+
+        .subscribe_submite {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--yello-color);
+            transition: var(--transition-base);
+
+            &:hover {
+                background: var(--primary-color3);
+            }
+        }
+
+    }
+}
+
+.zn_footer_social {
+    position: relative;
+
+    & ul {
+        @include displayFlex(flex, start, center, row);
+        gap: 28px;
+
+        & li a {
+            width: 28px;
+            height: 28px;
+            font-size: 15px;
+            @include displayFlex(flex, center, center, column);
+            color: var(--heading-color);
+
+            &:hover {
+                color: var(--primary-color3);
+
+                & svg {
+                    fill: var(--primary-color3);
+
+                    & path {
+                        fill: var(--primary-color3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.zn_footer_copyright_text {
+    padding: 16px 12px;
+    border-top: 1px solid rgba(13, 13, 13, .1);
+
+    & p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+
+
+// Footer 03
+.zc_footer_area03 {
+    position: relative;
+
+    & .zcMain_fWidget {
+        & [class^="col-"]:nth-child(1) {
+            @include screen-768 {
+                width: 55%;
+            }
+
+            @include screen-768 {
+                width: 55%;
+            }
+
+            @include portrait-phone {
+                width: 100%;
+            }
+        }
+
+        & [class^="col-"]:nth-child(2) {
+            width: 22.34%;
+
+            @include large-screen {
+                width: 29.34%;
+            }
+
+            @include screen-768 {
+                width: 45%;
+            }
+
+            @include portrait-phone {
+                width: 100%;
+            }
+        }
+
+        & [class^="col-"]:nth-child(3) {
+            width: 19.328%;
+
+            @include large-screen {
+                width: 18.328%;
+            }
+
+            @include screen-992 {
+                width: 28.99%;
+            }
+
+            @include screen-768 {
+                width: 45%;
+            }
+
+            @include portrait-phone {
+                width: 100%;
+            }
+        }
+
+        & [class^="col-"]:nth-child(4) {
+            @include large-screen {
+                width: 27%;
+            }
+
+            @include screen-992 {
+                width: 43%;
+            }
+
+            @include screen-768 {
+                width: 55%;
+            }
+
+            @include portrait-phone {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.widget {
+    position: relative;
+}
+
+.zc_about_widget {
+    & p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        color: rgba(255, 255, 255, .7);
+        max-width: 305px;
+    }
+}
+
+.zc_widget_title {
+    font-family: var(--heading-font2);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 24px;
+    color: var(--white-color);
+}
+
+.zc3_footer_social {
+    & label {
+        font-family: var(--heading-font2);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px;
+        color: var(--white-color);
+        margin-bottom: 16px
+    }
+
+    & ul {
+        @include displayFlex(flex, start, center, row);
+        gap: 32px;
+
+        & li a {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            color: var(--white-color);
+            text-transform: uppercase;
+            position: relative;
+            transition: var(--transition-base);
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 13px;
+                right: -13px;
+                top: 6px;
+                background: rgba(255, 255, 255, .2)
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.zc_widget_nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    @include displayFlex(flex, start, start, column);
+    gap: 20px;
+
+    & li a {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        color: rgba(255, 255, 255, .7);
+
+        &:hover {
+            color: var(--white-color);
+        }
+    }
+}
+
+.zc_contact_widget {
+    position: relative;
+
+    & .zc_singleAddress {
+        position: relative;
+        margin-bottom: 20px;
+
+        & a,
+        & p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            color: rgba(255, 255, 255, .7);
+        }
+
+        & a:hover {
+            color: var(--heading-color);
+        }
+    }
+
+    & .zc_singleAddress.tel {
+        & a {
+            font-family: var(--heading-font2);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 34px;
+            color: var(--white-color);
+
+            @include large-screen {
+                font-size: 21px;
+                line-height: 31px;
+            }
+
+            &:hover {
+                color: var(--heading-color);
+            }
+        }
+    }
+
+    & .visit_btn {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+        color: var(--white-color);
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background: var(--white-color);
+            transition: var(--transition-base);
+        }
+
+        &:hover {
+            color: var(--heading-color);
+
+            &::after {
+                background: var(--heading-color);
+            }
+        }
+    }
+}
+
+.zc_footerBtm_wrap03 {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding: 23px 0;
+    @include displayFlex(flex, start, center, row);
+    gap: 30px;
+
+    @include screen-992 {
+        flex-wrap: wrap;
+    }
+
+    @include screen-768 {
+        gap: 20px;
+    }
+
+    &>* {
+        flex: 0 0 auto;
+    }
+
+    &>[class^="zc_"]:nth-child(1) {
+        width: 38%;
+
+        @include screen-992 {
+            width: calc(60% - 15px);
+        }
+
+        @include screen-768 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &>[class^="zc_"]:nth-child(2) {
+        width: 25%;
+
+        @include screen-992 {
+            width: calc(40% - 15px);
+            text-align: right;
+        }
+
+        @include screen-768 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &>[class^="zc_"]:nth-child(3) {
+        width: 32.34%;
+
+        @include screen-992 {
+            width: calc(50% - 15px);
+        }
+
+        @include screen-768 {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    & .zc_coppyright p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: rgba(255, 255, 255, .7);
+        margin: 0;
+
+        @include large-screen {
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        @include screen-768 {
+            text-align: center;
+        }
+    }
+}
+
+.zc_widget_nav.inline_nav {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: end;
+
+    @include screen-992 {
+        justify-content: start;
+    }
+
+    @include screen-768 {
+        justify-content: center;
+    }
+
+    & li a {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 13px;
+            right: -13px;
+            top: 6px;
+            background: rgba(255, 255, 255, .7)
+        }
+
+        @include large-screen {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    & li:nth-last-child(1) a {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.gm_fPayments {
+    @include displayFlex(flex, start, center, row);
+    gap: 15px;
+
+    & a {
+        &:hover {
+            opacity: .85;
+        }
+    }
+}
