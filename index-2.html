@@ -3,27 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zircon - Kids Store</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.png">
 
     <!--essential css files-->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-
     <!--essential scripts file-->
+    <script src="assets/js/bootstrap.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
     <script src="assets/js/gsap-scroll-trigger.js" defer="defer"></script>
     <script src="assets/js/gsap-split-text.js" defer="defer"></script>
+    <script src="assets/js/nice-select2.js" defer="defer"></script>
     <script src="assets/js/scripts.js" defer="defer"></script>
 </head>
 
 <body>
 
+    <div class="zc_preloader">
+        <div class="zc_loading_container">
+            <div class="loading_text">
+                <span>Z</span>
+                <span>i</span>
+                <span>r</span>
+                <span>c</span>
+                <span>o</span>
+                <span>n</span>
+                <span>.</span>
+            </div>
+        </div>
+    </div>
     <!--Header Section Start-->
     <header class="zn_header_section header-sticky">
         <div class="zn_header_top">
@@ -112,11 +128,177 @@
                                         <li><a href="index-3.html">Home Page 3</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">About</a>
+                                <li class="has-submenu has-megamenu">
+                                    <a href="javascript:void(0)">Collection</a>
+                                    <!-- Mega Menu  -->
+                                    <div class="zc_megamenu">
+                                        <div class="header-submenu-wrapper">
+                                            <div class="container">
+                                                <div class="header-megamenu-wrapper row">
+                                                    <div class="col-3">
+                                                        <!-- Header Mega Menu List -->
+                                                        <div class="header-megamenu-list">
+                                                            <a href="shop.html" class="header-megamenu-title">Best
+                                                                Seller</a>
+                                                            <ul role="list">
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">T-shirt dress</a>
+                                                                    <span class="badge">Sale</span>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">T-shirt dress</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Denim jacket</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- Header Mega Menu List -->
+                                                        <div class="header-megamenu-list">
+                                                            <a href="shop.html" class="header-megamenu-title">Fashion</a>
+                                                            <ul role="list">
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Pencil skirt</a>
+                                                                    <span class="badge sale">Sale</span>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Maxi dress</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Crop top</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Skinny jeans</a>
+                                                                    <span class="badge new">Sale</span>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="shop.html" class="link-animation">Women Shirt</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="megamenu-collection">
+                                                            <div class="megamenu-collection-image-wrapper">
+                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-collection-image.jpg" alt="Outfit wear for Women">
+                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-collection-image-hover.jpg" alt="Outfit wear for Women">
+                                                            </div>
+                                                            <div class="megamenu-collection-content">
+                                                                <h4><a href="shop.html" class="link-animation">Outfit wear for Women</a>
+                                                                </h4>
+                                                                <p>Start From $16.00</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="megamenu-collection">
+                                                            <div class="megamenu-collection-image-wrapper">
+                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/02-collection-image.jpg" alt="Striped crop top">
+                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/02-collection-image-hover.jpg" alt="Striped crop top">
+                                                            </div>
+                                                            <div class="megamenu-collection-content">
+                                                                <h4><a href="shop.html" class="link-animation">Outfit wear for Women</a>
+                                                                </h4>
+                                                                <p>Start From $16.00</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <ul role="list" class="megamenu-collection-product-list">
+                                                            <!-- PRODUCT ITEM -->
+                                                            <li class="product">
+                                                                <div class="product-image-wrapper">
+                                                                    <a href="shop-details.html">
+                                                                        <div class="product-image">
+                                                                            <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-product-image.jpg" alt="Outfit wear for Women">
+                                                                            <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-product-image-hover.jpg" alt="Outfit wear for Women">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="item-content">
+                                                                    <div class="rating-star-sm">
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                            </svg></span>
+                                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                            </svg></span>
+                                                                    </div>
+                                                                    <h6 class="item-heading">
+                                                                        <a class="link-animation" href="#">Striped crop top</a>
+                                                                    </h6>
+                                                                    <p class="product-price">
+                                                                        $16.00<del>$10.00</del>
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+                                                            <!-- PRODUCT ITEM -->
+                                                            <li class="product">
+                                                                <div class="product-image-wrapper">
+                                                                    <a href="shop-details.html">
+                                                                        <div class="product-image">
+                                                                            <img class="img-fluid" loading="lazy" src="./assets/images/collections/05-product-image-hover.jpg" alt="Striped crop top">
+                                                                            <img class="img-fluid" loading="lazy" src="./assets/images/collections/05-product-image.jpg" alt="Striped crop top">
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                                <div class="item-content">
+                                                                    <div class="rating-star-sm">
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                            </svg>
+                                                                        </span>
+                                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                            </svg></span>
+                                                                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                            </svg></span>
+                                                                    </div>
+                                                                    <h6 class="item-heading">
+                                                                        <a class="link-animation" href="#">Sequin Party Jumpsuit</a>
+                                                                    </h6>
+                                                                    <p class="product-price">
+                                                                        $12.00<del>$20.00</del>
+                                                                    </p>
+                                                                </div>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="has-submenu has-megamenu">
-                                    <a href="#">Shop</a>
+                                    <a href="javascript:void(0);">Shop</a>
                                     <!-- Mega Menu  -->
                                     <div class="zc_megamenu">
                                         <div class="header-submenu-wrapper">
@@ -276,13 +458,30 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#">Blog</a>
+                                    <a href="blog.html">Blog</a>
                                 </li>
-                                <li>
+                                <li class="has-submenu">
                                     <a href="#">Pages</a>
+                                    <ul class="submenu-wrapper sm_subMenu">
+                                        <li> <a href="about.html">About</a></li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li class="has-submenu"><a href="javascript:void(0)">Product</a>
+                                            <ul class="submenu-wrapper">
+                                                <li><a href="shop.html">Shop Grid</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="product-details.html">Product Details</a></li>
+                                                <li><a href="product-details-2.html">Product Details V2</a></li>
+                                                <li><a href="product-details-3.html">Product Details V3</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="order-tracking.html">Order Tracking</a></li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="contact.html">Contact</a>
                                 </li>
                             </ul>
                             <div class="zn_header_logo_content">
@@ -293,7 +492,7 @@
                     <div class="col-lg-2 col-sm-4 col-5">
                         <div class="zn_header_right d-flex align-items-center justify-content-end">
                             <div class="zn_user_links">
-                                <a href="#">
+                                <a href="javascript:void(0);">
                                     <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <mask id="mask0_3103_400" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="12" width="16" height="8">
                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12.4961H15.8399V19.8701H0V12.4961Z" fill="white" />
@@ -309,6 +508,11 @@
                                         </g>
                                     </svg>
                                 </a>
+                                <ul class="position-absolute user-menu">
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="signup.html">Sign Up</a></li>
+                                    <li><a href="login.html">My Account</a></li>
+                                </ul>
                             </div>
                             <div class="zn_header_cart">
                                 <a href="#" class="zn_header_card_shop">
@@ -337,7 +541,7 @@
 
     <main id="MainContent">
         <!-- Hero Section Start -->
-        <section class="zn_hero_slider overflow-hidden position-relative">
+        <div class="zn_hero_slider overflow-hidden position-relative">
             <svg class="clippy">
                 <defs>
                     <clipPath id="hreoBnar_clip" clipPathUnits="objectBoundingBox">
@@ -399,11 +603,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
         <!-- Hero Section End -->
 
         <!-- Category Section Start -->
-        <section class="zn_category_section bg-white overflow-hidden">
+        <section class="zn_category_section bg-white overflow-hidden py-130">
             <div class="container">
                 <div class="zn_common_title zn_category_title text-center mb-56">
                     <h4 class="zn_section_subheading ">Popular Category</h4>
@@ -1500,7 +1704,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="zn_brand_swipper">
+                        <div class="zn_brand_swipper overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <a href="#" class="zn_brand_item">
@@ -1618,58 +1822,74 @@
             <img src="assets/images/home2/testim-shape-01.png" class="zn_testimonial_shape_01" alt="Zircon">
             <img src="assets/images/home2/testim-shape-02.png" class="zn_testimonial_shape_02" alt="Zircon">
             <div class="container">
-                <div class="zn_common_title zn_testimonial_title text-center mb-56">
-                    <h4 class="zn_section_subheading"> Testimonial</h4>
-                    <h2 class="zn_section_heading split-text right">What Our Client's Says</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="zn_common_title zn_testimonial_title text-center mb-56">
+                            <h4 class="zn_section_subheading"> Testimonial</h4>
+                            <h2 class="zn_section_heading split-text right">What Our Client's Says</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="zn_testimonial-swipper overflow-hidden">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="zn_testimonial_cnt">
-                                <h5 class="mb24">“Style Clothing for Juniors”</h5>
-                                <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
-                            </div>
-                            <div class="gm_testi_author">
-                                <img src="assets/images/author/hm2-testim-author-1.jpg" alt="Author">
-                                </span>
-                                <h3 class="gm_testi_author_name">Robert Stiphen</h3>
-                                <p class="gm_testi_author_desig">Fashion Designer</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="zn_testimonial_cnt">
-                                <h5 class="mb24">“Everything a about Needs”</h5>
-                                <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
-                            </div>
-                            <div class="gm_testi_author">
-                                <img src="assets/images/author/hm2-testim-author-2.jpg" alt="Author">
-                                </span>
-                                <h3 class="gm_testi_author_name">Michle Jhon Smith</h3>
-                                <p class="gm_testi_author_desig">Web Developer</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="zn_testimonial_cnt">
-                                <h5 class="mb24">“Dressing kids is An Art”</h5>
-                                <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
-                            </div>
-                            <div class="gm_testi_author">
-                                <img src="assets/images/author/hm2-testim-author-3.jpg" alt="Author">
-                                </span>
-                                <h3 class="gm_testi_author_name">Sellina Gomez</h3>
-                                <p class="gm_testi_author_desig">Fashion Designer</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="zn_testimonial_cnt">
-                                <h5 class="mb24">“Style Clothing for Juniors”</h5>
-                                <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
-                            </div>
-                            <div class="gm_testi_author">
-                                <img src="assets/images/author/hm2-testim-author-2.jpg" alt="Author">
-                                </span>
-                                <h3 class="gm_testi_author_name">Michle Jhon Smith</h3>
-                                <p class="gm_testi_author_desig">Web Developer</p>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="zn_testimonial-swipper overflow-hidden">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="zn_testimonial_wrap position-relative">
+                                        <div class="zn_testimonial_cnt">
+                                            <h5 class="mb24">“Style Clothing for Juniors”</h5>
+                                            <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
+                                        </div>
+                                        <div class="zc_testi_author">
+                                            <img src="assets/images/author/hm2-testim-author-1.jpg" alt="Author">
+                                            </span>
+                                            <h3 class="zc_testi_author_name">Robert Stiphen</h3>
+                                            <p class="zc_testi_author_desig">Fashion Designer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="zn_testimonial_wrap position-relative">
+                                        <div class="zn_testimonial_cnt">
+                                            <h5 class="mb24">“Everything a about Needs”</h5>
+                                            <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
+                                        </div>
+                                        <div class="zc_testi_author">
+                                            <img src="assets/images/author/hm2-testim-author-2.jpg" alt="Author">
+                                            </span>
+                                            <h3 class="zc_testi_author_name">Michle Jhon Smith</h3>
+                                            <p class="zc_testi_author_desig">Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="zn_testimonial_wrap position-relative">
+                                        <div class="zn_testimonial_cnt">
+                                            <h5 class="mb24">“Dressing kids is An Art”</h5>
+                                            <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
+                                        </div>
+                                        <div class="zc_testi_author">
+                                            <img src="assets/images/author/hm2-testim-author-3.jpg" alt="Author">
+                                            </span>
+                                            <h3 class="zc_testi_author_name">Sellina Gomez</h3>
+                                            <p class="zc_testi_author_desig">Fashion Designer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="zn_testimonial_wrap position-relative">
+                                        <div class="zn_testimonial_cnt">
+                                            <h5 class="mb24">“Style Clothing for Juniors”</h5>
+                                            <p>Brighten up your look vibrant gemstone je we there are many variations of passages lorem Ipsum available.</p>
+                                        </div>
+                                        <div class="zc_testi_author">
+                                            <img src="assets/images/author/hm2-testim-author-2.jpg" alt="Author">
+                                            </span>
+                                            <h3 class="zc_testi_author_name">Michle Jhon Smith</h3>
+                                            <p class="zc_testi_author_desig">Web Developer</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zircon - Cosmetics & Beauty</title>
 
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.png">
+
     <!--essential css files-->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-
     <!--essential scripts file-->
+    <script src="assets/js/popper.min.js" defer="defer"></script>
+    <script src="assets/js/bootstrap.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
     <script src="assets/js/gsap-scroll-trigger.js" defer="defer"></script>
     <script src="assets/js/gsap-split-text.js" defer="defer"></script>
+    <script src="assets/js/nice-select2.js" defer="defer"></script>
     <script src="assets/js/scripts.js" defer="defer"></script>
 </head>
 
 <body>
 
+    <div class="zc_preloader">
+        <div class="zc_loading_container">
+            <div class="loading_text">
+                <span>Z</span>
+                <span>i</span>
+                <span>r</span>
+                <span>c</span>
+                <span>o</span>
+                <span>n</span>
+                <span>.</span>
+            </div>
+        </div>
+    </div>
 
     <!--START:Header Section -->
     <header class="zc_header_default header-sticky">
@@ -212,9 +231,32 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#">Pages</a>
+                                <li class="has-submenu"><a href="#">Pages</a>
+                                    <ul class="submenu-wrapper">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li class="has-submenu"><a href="javascript:void(0)">Product</a>
+                                            <ul class="submenu-wrapper">
+                                                <li><a href="shop.html">Shop Grid</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="product-details.html">Product Details</a></li>
+                                                <li><a href="product-details-2.html">Product Details V2</a></li>
+                                                <li><a href="product-details-3.html">Product Details V3</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="faq.html">Faq</a></li>
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="order-tracking.html">Order Tracking</a></li>
+                                    </ul>
                                 </li>
-                                <li><a href="#">Blog</a></li>
+                                <li class="has-submenu"><a href="#">Blog</a>
+                                    <ul class="submenu-wrapper">
+                                        <li><a href="blog.html">Blog List</a></li>
+                                        <li><a href="blog-single.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -226,12 +268,18 @@
                     <div class="col-xl-5 col-lg-4 col-7 col-sm-6">
                         <div class="zc_header_right d-flex align-items-center justify-content-end">
                             <div class="header-search">
-                                <button type="button" class="zc_header_search zc_headerSrc-open">
+                                <button type="button" class="zc_header_search zc_headerSrc-open" data-bs-toggle="dropdown" aria-expanded="false">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M22.0001 22.7502C21.9016 22.7505 21.804 22.7312 21.7131 22.6934C21.6221 22.6556 21.5395 22.6002 21.4701 22.5302L18.2501 19.3102C18.1176 19.1681 18.0455 18.98 18.0489 18.7857C18.0524 18.5914 18.1311 18.406 18.2685 18.2686C18.4059 18.1312 18.5913 18.0525 18.7856 18.0491C18.9799 18.0456 19.1679 18.1178 19.3101 18.2502L22.5301 21.4702C22.6349 21.5751 22.7062 21.7087 22.7351 21.8541C22.764 21.9995 22.7491 22.1502 22.6924 22.2872C22.6357 22.4241 22.5397 22.5412 22.4165 22.6236C22.2932 22.7061 22.1484 22.7501 22.0001 22.7502Z" fill="#0D0D0D" />
                                         <path d="M11 20.7502C9.07164 20.7502 7.18657 20.1784 5.58319 19.1071C3.97982 18.0357 2.73013 16.513 1.99218 14.7314C1.25422 12.9498 1.06114 10.9894 1.43735 9.09812C1.81355 7.2068 2.74215 5.46952 4.10571 4.10596C5.46928 2.7424 7.20656 1.8138 9.09787 1.43759C10.9892 1.06139 12.9496 1.25447 14.7312 1.99242C16.5127 2.73038 18.0355 3.98006 19.1068 5.58344C20.1782 7.18682 20.75 9.07188 20.75 11.0002C20.7471 13.5852 19.7189 16.0635 17.8911 17.8913C16.0632 19.7192 13.585 20.7473 11 20.7502ZM11 2.75025C9.36831 2.75025 7.77326 3.2341 6.41655 4.14062C5.05984 5.04715 4.00242 6.33562 3.378 7.84311C2.75358 9.3506 2.5902 11.0094 2.90853 12.6097C3.22685 14.2101 4.01259 15.6801 5.16637 16.8339C6.32016 17.9877 7.79017 18.7734 9.39051 19.0917C10.9909 19.4101 12.6497 19.2467 14.1571 18.6223C15.6646 17.9978 16.9531 16.9404 17.8596 15.5837C18.7661 14.227 19.25 12.6319 19.25 11.0002C19.2476 8.81294 18.3777 6.71591 16.831 5.16925C15.2843 3.62259 13.1873 2.75263 11 2.75025Z" fill="#0D0D0D" />
                                     </svg>
                                 </button>
+                                <div class="dropdown-menu dropdown-menu-end" style="">
+                                    <form class="search-form d-flex align-items-center gap-2">
+                                        <input type="text" placeholder="Search..." class="theme-input bg-transparent">
+                                        <button type="submit" class="submit-btn">Go</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="zc_header_user d-none d-sm-block">
                                 <a href="#">
@@ -289,12 +337,14 @@
                 <div class="zc_hero_box text-center" style="background-image: url(assets/images/banner/hero-bg.jpg)">
                     <div class="zc_hero_overlay position-absolute start-0 top-0 w-100 h-100"></div>
                     <span class="zc_hero_subtitle_wrapper"><span class="zc_hero_subtitle text-uppercase">Look Like You Desire</span></span>
-                    <div><h1 class="zc_hero_title split-text right">Be Gorgeous Inside Out Look</h1></div>
+                    <div>
+                        <h1 class="zc_hero_title split-text right">Be Gorgeous Inside Out Look</h1>
+                    </div>
                     <div class="zc_hero_explore">
                         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <path id="circlePath" fill="none" d="M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0" />
                             <text id="text">
-                                <textPath id="textPath" href="#circlePath" >Explore Our Products Explore Our Products</textPath>
+                                <textPath id="textPath" href="#circlePath">Explore Our Products Explore Our Products</textPath>
                             </text>
                         </svg>
                     </div>
@@ -988,29 +1038,13 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <div class="zc_primary_btn">
-                            <a href="javascript:void(0);" class="blob-btn">
-                                Explore More Products +
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </a>
-                            <br />
-                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                <defs>
-                                    <filter id="goo">
-                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                    </filter>
-                                </defs>
-                            </svg>
-                        </div>
+                        <a href="javascript:void(0);" class="zc_primary_btn">
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btn_text">Explore More Products +</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1025,29 +1059,13 @@
                         <div class="zc_look_single" style="background-image: url(assets/images/look-book/look-01.jpg)">
                             <h3 class="split-text right">You are a New Beauty</h3>
                             <p>Get at only $627.00</p>
-                            <div class="zc_primary_btn">
-                                <a href="javascript:void(0);" class="blob-btn color-heading">
-                                    Explore Products
-                                    <span class="blob-btn__inner">
-                                        <span class="blob-btn__blobs">
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <br />
-                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                    <defs>
-                                        <filter id="goo">
-                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </div>
+                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btn_text">Explore Products</span>
+                            </a>
                             <span class="discount_badge">30% Discount</span>
                         </div>
                     </div>
@@ -1055,29 +1073,13 @@
                         <div class="zc_look_single" style="background-image: url(assets/images/look-book/look-02.jpg)">
                             <h3 class="split-text right">Define Your Beauty</h3>
                             <p>GET 10% OFF CREAM</p>
-                            <div class="zc_primary_btn">
-                                <a href="javascript:void(0);" class="blob-btn shop-btn">
-                                    Shop Now
-                                    <span class="blob-btn__inner">
-                                        <span class="blob-btn__blobs">
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                        </span>
-                                    </span>
-                                </a>
-                                <br />
-                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                    <defs>
-                                        <filter id="goo">
-                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </div>
+                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btnShape"></span>
+                                <span class="zc_btn_text">Shop Now</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1226,29 +1228,13 @@
                                 <div class="newsletter_input">
                                     <input type="text" placeholder="Enter your mail address">
                                 </div>
-                                <div class="zc_primary_btn">
-                                    <button type="submit" class="blob-btn color-heading">
-                                        Subscribe Now
-                                        <span class="blob-btn__inner white-bg">
-                                            <span class="blob-btn__blobs">
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                            </span>
-                                        </span>
-                                    </button>
-                                    <br />
-                                    <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                        <defs>
-                                            <filter id="goo">
-                                                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                            </filter>
-                                        </defs>
-                                    </svg>
-                                </div>
+                                <button type="submit" class="zc_primary_btn">
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btn_text">Subscribe Now</span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -1409,29 +1395,13 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="zc_primary_btn">
-                                                <a href="javascript:void(0);" class="blob-btn">
-                                                    Purchase Now
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <br />
-                                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                                    <defs>
-                                                        <filter id="goo">
-                                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                        </filter>
-                                                    </defs>
-                                                </svg>
-                                            </div>
+                                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btn_text">Purchase Now</span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="selling_desc">
@@ -1503,29 +1473,13 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="zc_primary_btn">
-                                                <a href="javascript:void(0);" class="blob-btn">
-                                                    Purchase Now
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <br />
-                                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                                    <defs>
-                                                        <filter id="goo">
-                                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                        </filter>
-                                                    </defs>
-                                                </svg>
-                                            </div>
+                                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                                <span class="zc_btn_text">Purchase Now</span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="selling_desc">
@@ -1597,29 +1551,13 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="zc_primary_btn">
-                                                <a href="javascript:void(0);" class="blob-btn">
-                                                    Purchase Now
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <br />
-                                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                                    <defs>
-                                                        <filter id="goo">
-                                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                        </filter>
-                                                    </defs>
-                                                </svg>
-                                            </div>
+                                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                                <span class="zc_btn_text">Purchase Now</span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="selling_desc">
@@ -1691,29 +1629,13 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="zc_primary_btn">
-                                                <a href="javascript:void(0);" class="blob-btn">
-                                                    Purchase Now
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <br />
-                                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                                    <defs>
-                                                        <filter id="goo">
-                                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                        </filter>
-                                                    </defs>
-                                                </svg>
-                                            </div>
+                                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                                <span class="zc_btn_text">Purchase Now</span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="selling_desc">
@@ -1790,29 +1712,13 @@
                                                     </svg>
                                                 </a>
                                             </div>
-                                            <div class="zc_primary_btn">
-                                                <a href="javascript:void(0);" class="blob-btn">
-                                                    Purchase Now
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                                <br />
-                                                <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                                    <defs>
-                                                        <filter id="goo">
-                                                            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                                            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                                            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                                        </filter>
-                                                    </defs>
-                                                </svg>
-                                            </div>
+                                            <a href="javascript:void(0);" class="zc_primary_btn">
+                                                <span class="zc_btn_text">Purchase Now</span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                                <span class="zc_btnShape"></span>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="selling_desc">
@@ -2534,29 +2440,13 @@
                         <h2 class="zc_section_heading primary-text-color split-text right">Latest From Blog</h2>
                     </div>
                     <div class="col-xl-6 col-lg-6 order-first order-lg-last text-center text-lg-end mb-5 mb-lg-0">
-                        <div class="zc_primary_btn">
-                            <a href="javascript:void(0);" class="blob-btn">
-                                Explore More Products +
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </a>
-                            <br />
-                            <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
-                                <defs>
-                                    <filter id="goo">
-                                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-                                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-                                        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-                                    </filter>
-                                </defs>
-                            </svg>
-                        </div>
+                        <a href="javascript:void(0);" class="zc_primary_btn">
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btn_text">Explore More Products +</span>
+                        </a>
                     </div>
                 </div>
                 <div class="row g-30 ">
@@ -2663,7 +2553,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer_header">
-                        <div><h2 class="split-text right">Let’s Get In Touch</h2></div>
+                        <div>
+                            <h2 class="split-text right">Let’s Get In Touch</h2>
+                        </div>
                         <button><img src="assets/images/footer-arrow-button.png" alt="Zircon"></button>
                     </div>
                 </div>
@@ -2794,16 +2686,6 @@
         </form>
     </div>
     <!-- Header Mobile Menu End -->
-
-    <!-- Header Search Form Start -->
-    <div class="zc_search_form">
-        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
-        <form action="#" class="d-flex align-items-center">
-            <input type="text" placeholder="Search...." class="theme-input">
-            <button type="submit" class="submit-btn">Go</button>
-        </form>
-    </div>
-    <!-- Header Search Form End -->
 
 </body>
 

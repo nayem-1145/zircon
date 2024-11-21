@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zircon - Fashion Store</title>
 
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.png">
+
     <!--essential css files-->
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select2.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-
     <!--essential scripts file-->
+    <script src="assets/js/popper.min.js" defer="defer"></script>
+    <script src="assets/js/bootstrap.min.js" defer="defer"></script>
     <script src="assets/js/swiper-bundle.min.js" defer="defer"></script>
     <script src="assets/js/gsap.js" defer="defer"></script>
     <script src="assets/js/gsap-scroll-trigger.js" defer="defer"></script>
     <script src="assets/js/gsap-split-text.js" defer="defer"></script>
+    <script src="assets/js/nice-select2.js" defer="defer"></script>
     <script src="assets/js/scripts.js" defer="defer"></script>
 </head>
 
 <body>
 
+    <div class="zc_preloader">
+        <div class="zc_loading_container">
+            <div class="loading_text">
+                <span>Z</span>
+                <span>i</span>
+                <span>r</span>
+                <span>c</span>
+                <span>o</span>
+                <span>n</span>
+                <span>.</span>
+            </div>
+        </div>
+    </div>
 
     <!--START:Header Section -->
     <header class="zc03_header_section header-sticky">
@@ -207,27 +226,211 @@
                                     </li>
                                     <li class="has-submenu"><a href="#">Product</a>
                                         <ul class="submenu-wrapper">
-                                            <li><a href="#">Shop Grid</a></li>
-                                            <li><a href="#">Shop List</a></li>
-                                            <li><a href="#">Product Details</a></li>
-                                            <li><a href="#">Product Details V2</a></li>
-                                            <li><a href="#">Product Details V3</a></li>
+                                            <li><a href="shop.html">Shop Grid</a></li>
+                                            <li><a href="shop-list.html">Shop List</a></li>
+                                            <li><a href="product-details.html">Product Details</a></li>
+                                            <li><a href="product-details-2.html">Product Details V2</a></li>
+                                            <li><a href="product-details-3.html">Product Details V3</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Pages</a></li>
-                                    <li><a href="#">Blog</a></li>
+                                    <li class="has-submenu has-megamenu">
+                                        <a href="javascript:void(0)">Collection</a>
+                                        <!-- Mega Menu  -->
+                                        <div class="zc_megamenu">
+                                            <div class="header-submenu-wrapper">
+                                                <div class="container">
+                                                    <div class="header-megamenu-wrapper row">
+                                                        <div class="col-3">
+                                                            <!-- Header Mega Menu List -->
+                                                            <div class="header-megamenu-list">
+                                                                <a href="shop.html" class="header-megamenu-title">Best
+                                                                    Seller</a>
+                                                                <ul role="list">
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">T-shirt dress</a>
+                                                                        <span class="badge">Sale</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">T-shirt dress</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Denim jacket</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- Header Mega Menu List -->
+                                                            <div class="header-megamenu-list">
+                                                                <a href="shop.html" class="header-megamenu-title">Fashion</a>
+                                                                <ul role="list">
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Pencil skirt</a>
+                                                                        <span class="badge sale">Sale</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Maxi dress</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Crop top</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Skinny jeans</a>
+                                                                        <span class="badge new">Sale</span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="shop.html" class="link-animation">Women Shirt</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="megamenu-collection">
+                                                                <div class="megamenu-collection-image-wrapper">
+                                                                    <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-collection-image.jpg" alt="Outfit wear for Women">
+                                                                    <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-collection-image-hover.jpg" alt="Outfit wear for Women">
+                                                                </div>
+                                                                <div class="megamenu-collection-content">
+                                                                    <h4><a href="shop.html" class="link-animation">Outfit wear for Women</a>
+                                                                    </h4>
+                                                                    <p>Start From $16.00</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <div class="megamenu-collection">
+                                                                <div class="megamenu-collection-image-wrapper">
+                                                                    <img class="img-fluid" loading="lazy" src="./assets/images/collections/02-collection-image.jpg" alt="Striped crop top">
+                                                                    <img class="img-fluid" loading="lazy" src="./assets/images/collections/02-collection-image-hover.jpg" alt="Striped crop top">
+                                                                </div>
+                                                                <div class="megamenu-collection-content">
+                                                                    <h4><a href="shop.html" class="link-animation">Outfit wear for Women</a>
+                                                                    </h4>
+                                                                    <p>Start From $16.00</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <ul role="list" class="megamenu-collection-product-list">
+                                                                <!-- PRODUCT ITEM -->
+                                                                <li class="product">
+                                                                    <div class="product-image-wrapper">
+                                                                        <a href="shop-details.html">
+                                                                            <div class="product-image">
+                                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-product-image.jpg" alt="Outfit wear for Women">
+                                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/01-product-image-hover.jpg" alt="Outfit wear for Women">
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="item-content">
+                                                                        <div class="rating-star-sm">
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                                </svg></span>
+                                                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                                </svg></span>
+                                                                        </div>
+                                                                        <h6 class="item-heading">
+                                                                            <a class="link-animation" href="#">Striped crop top</a>
+                                                                        </h6>
+                                                                        <p class="product-price">
+                                                                            $16.00<del>$10.00</del>
+                                                                        </p>
+                                                                    </div>
+                                                                </li>
+                                                                <!-- PRODUCT ITEM -->
+                                                                <li class="product">
+                                                                    <div class="product-image-wrapper">
+                                                                        <a href="shop-details.html">
+                                                                            <div class="product-image">
+                                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/05-product-image-hover.jpg" alt="Striped crop top">
+                                                                                <img class="img-fluid" loading="lazy" src="./assets/images/collections/05-product-image.jpg" alt="Striped crop top">
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="item-content">
+                                                                        <div class="rating-star-sm">
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span>
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                                                                                </svg>
+                                                                            </span>
+                                                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                                </svg></span>
+                                                                            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000000" viewBox="0 0 256 256">
+                                                                                    <path d="M243,96a20.33,20.33,0,0,0-17.74-14l-56.59-4.57L146.83,24.62a20.36,20.36,0,0,0-37.66,0L87.35,77.44,30.76,82A20.45,20.45,0,0,0,19.1,117.88l43.18,37.24-13.2,55.7A20.37,20.37,0,0,0,79.57,233L128,203.19,176.43,233a20.39,20.39,0,0,0,30.49-22.15l-13.2-55.7,43.18-37.24A20.43,20.43,0,0,0,243,96ZM172.53,141.7a12,12,0,0,0-3.84,11.86L181.58,208l-47.29-29.08a12,12,0,0,0-12.58,0L74.42,208l12.89-54.4a12,12,0,0,0-3.84-11.86L41.2,105.24l55.4-4.47a12,12,0,0,0,10.13-7.38L128,41.89l21.27,51.5a12,12,0,0,0,10.13,7.38l55.4,4.47Z"></path>
+                                                                                </svg></span>
+                                                                        </div>
+                                                                        <h6 class="item-heading">
+                                                                            <a class="link-animation" href="#">Sequin Party Jumpsuit</a>
+                                                                        </h6>
+                                                                        <p class="product-price">
+                                                                            $12.00<del>$20.00</del>
+                                                                        </p>
+                                                                    </div>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+                                        <ul class="submenu-wrapper">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                            <li><a href="cart.html">Cart</a></li>
+                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="order-tracking.html">Order Tracking</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Blog</a></li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-6">
                             <div class="zc3_header_right d-flex align-items-center justify-content-end">
                                 <div class="header-search d-none d-sm-block">
-                                    <button type="button" class="zc3_header_search zc_headerSrc-open">
+                                    <button type="button" class="zc3_header_search zc_headerSrc-open" data-bs-toggle="dropdown" aria-expanded="false">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M22.0001 22.7502C21.9016 22.7505 21.804 22.7312 21.7131 22.6934C21.6221 22.6556 21.5395 22.6002 21.4701 22.5302L18.2501 19.3102C18.1176 19.1681 18.0455 18.98 18.0489 18.7857C18.0524 18.5914 18.1311 18.406 18.2685 18.2686C18.4059 18.1312 18.5913 18.0525 18.7856 18.0491C18.9799 18.0456 19.1679 18.1178 19.3101 18.2502L22.5301 21.4702C22.6349 21.5751 22.7062 21.7087 22.7351 21.8541C22.764 21.9995 22.7491 22.1502 22.6924 22.2872C22.6357 22.4241 22.5397 22.5412 22.4165 22.6236C22.2932 22.7061 22.1484 22.7501 22.0001 22.7502Z" fill="#0D0D0D" />
                                             <path d="M11 20.7502C9.07164 20.7502 7.18657 20.1784 5.58319 19.1071C3.97982 18.0357 2.73013 16.513 1.99218 14.7314C1.25422 12.9498 1.06114 10.9894 1.43735 9.09812C1.81355 7.2068 2.74215 5.46952 4.10571 4.10596C5.46928 2.7424 7.20656 1.8138 9.09787 1.43759C10.9892 1.06139 12.9496 1.25447 14.7312 1.99242C16.5127 2.73038 18.0355 3.98006 19.1068 5.58344C20.1782 7.18682 20.75 9.07188 20.75 11.0002C20.7471 13.5852 19.7189 16.0635 17.8911 17.8913C16.0632 19.7192 13.585 20.7473 11 20.7502ZM11 2.75025C9.36831 2.75025 7.77326 3.2341 6.41655 4.14062C5.05984 5.04715 4.00242 6.33562 3.378 7.84311C2.75358 9.3506 2.5902 11.0094 2.90853 12.6097C3.22685 14.2101 4.01259 15.6801 5.16637 16.8339C6.32016 17.9877 7.79017 18.7734 9.39051 19.0917C10.9909 19.4101 12.6497 19.2467 14.1571 18.6223C15.6646 17.9978 16.9531 16.9404 17.8596 15.5837C18.7661 14.227 19.25 12.6319 19.25 11.0002C19.2476 8.81294 18.3777 6.71591 16.831 5.16925C15.2843 3.62259 13.1873 2.75263 11 2.75025Z" fill="#0D0D0D" />
                                         </svg>
                                     </button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <form class="search-form d-flex align-items-center gap-2 mb-0">
+                                            <input type="text" placeholder="Search..." class="theme-input bg-transparent">
+                                            <button type="submit" class="submit-btn">Go</button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="zc3_header_user d-none d-sm-block">
                                     <a href="#">
@@ -291,17 +494,13 @@
                                         <div class="hero_bnner03_content pe-xxl-5">
                                             <h2>Fashion Has to Reflect You</h2>
                                             <p>The world of fashion under gone a transformation with the the rise of perfect but your outfit can be.</p>
-                                            <div class="zc_primary_btn3 text-start">
-                                                <a href="javascript:void(0);" class="blob-btn">
+                                            <div class="text-start">
+                                                <a href="javascript:void(0);" class="zc_primary_btn3">
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
                                                     <span class="zc_btn_text">View Collection <i class="fas fa-arrow-right"></i></span>
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -319,17 +518,13 @@
                                         <div class="hero_bnner03_content pe-xxl-5">
                                             <h2>Fashion Has to Reflect You</h2>
                                             <p>The world of fashion under gone a transformation with the the rise of perfect but your outfit can be.</p>
-                                            <div class="zc_primary_btn3 text-start">
-                                                <a href="javascript:void(0);" class="blob-btn">
+                                            <div class=" text-start">
+                                                <a href="javascript:void(0);" class="zc_primary_btn3">
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
                                                     <span class="zc_btn_text">View Collection <i class="fas fa-arrow-right"></i></span>
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -347,17 +542,13 @@
                                         <div class="hero_bnner03_content pe-xxl-5">
                                             <h2>Fashion Has to Reflect You</h2>
                                             <p>The world of fashion under gone a transformation with the the rise of perfect but your outfit can be.</p>
-                                            <div class="zc_primary_btn3 text-start">
-                                                <a href="javascript:void(0);" class="blob-btn">
+                                            <div class=" text-start">
+                                                <a href="javascript:void(0);" class="zc_primary_btn3">
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
+                                                    <span class="zc_btnShape"></span>
                                                     <span class="zc_btn_text">View Collection <i class="fas fa-arrow-right"></i></span>
-                                                    <span class="blob-btn__inner">
-                                                        <span class="blob-btn__blobs">
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                            <span class="blob-btn__blob"></span>
-                                                        </span>
-                                                    </span>
                                                 </a>
                                             </div>
                                         </div>
@@ -736,21 +927,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="zc_primary_btn3 text-center">
-                            <a href="javascript:void(0);" class="blob-btn">
-                                <span class="zc_btn_text">Explore Our All Products <i class="fas fa-arrow-right"></i></span>
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </a>
-                        </div>
+                <div class="row mt-5">
+                    <div class="col-lg-12 text-center pt-2">
+                        <a href="javascript:void(0);" class="zc_primary_btn3">
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btnShape"></span>
+                            <span class="zc_btn_text">Explore Our All Products <i class="fas fa-arrow-right"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1003,17 +1188,13 @@
                         <div class="zc3_about_content py-130">
                             <h2 class="zc_section_heading3 mb-40 split-text right">Not Just Fashion, But The Design</h2>
                             <p class="mb-56">Fashion-friendly clothes for fashion enthusiasts. Clothes are your beauty ticket. Our fabric will build your trust in us. We got the best that you can wear a dress. Drip in class. Be what you want to be and wear what you like. Classy clothes for Classy people the spirit of Fashion.</p>
-                            <div class="zc_primary_btn3 text-start">
-                                <a href="javascript:void(0);" class="blob-btn">
+                            <div class="text-start">
+                                <a href="javascript:void(0);" class="zc_primary_btn3">
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
+                                    <span class="zc_btnShape"></span>
                                     <span class="zc_btn_text">View Collection <i class="fas fa-arrow-right"></i></span>
-                                    <span class="blob-btn__inner">
-                                        <span class="blob-btn__blobs">
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                        </span>
-                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -1140,34 +1321,26 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="zc3_lookbk_item2 mb-30" style="background-image: url(./assets/images/look-book/lookbook3.2img.png);">
                             <div class="zc3_lookbk_item2__content w-100">
-                                <div class="zc_primary_btn3 text-start">
-                                    <a href="javascript:void(0);" class="blob-btn">
+                                <div class=" text-start">
+                                    <a href="javascript:void(0);" class="zc_primary_btn3">
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
                                         <span class="zc_btn_text">New Arrival <i class="fas fa-arrow-right"></i></span>
-                                        <span class="blob-btn__inner">
-                                            <span class="blob-btn__blobs">
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                            </span>
-                                        </span>
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="zc3_lookbk_item2" style="background-image: url(./assets/images/look-book/lookbook3.3img.png);">
                             <div class="zc3_lookbk_item2__content w-100">
-                                <div class="zc_primary_btn3 text-end">
-                                    <a href="javascript:void(0);" class="blob-btn">
+                                <div class=" text-end">
+                                    <a href="javascript:void(0);" class="zc_primary_btn3">
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
+                                        <span class="zc_btnShape"></span>
                                         <span class="zc_btn_text">Trending Now <i class="fas fa-arrow-right"></i></span>
-                                        <span class="blob-btn__inner">
-                                            <span class="blob-btn__blobs">
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                                <span class="blob-btn__blob"></span>
-                                            </span>
-                                        </span>
                                     </a>
                                     <br />
                                     <svg class="d-none" xmlns="http://www.w3.org/2000/svg" version="1.1">
@@ -1497,16 +1670,6 @@
         </form>
     </div>
     <!-- Header Mobile Menu End -->
-
-    <!-- Header Search Form Start -->
-    <div class="zc_search_form">
-        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
-        <form action="#" class="d-flex align-items-center">
-            <input type="text" placeholder="Search...." class="theme-input">
-            <button type="submit" class="submit-btn">Go</button>
-        </form>
-    </div>
-    <!-- Header Search Form End -->
 </body>
 
 </html>
