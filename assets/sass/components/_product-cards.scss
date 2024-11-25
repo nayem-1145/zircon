@@ -154,14 +154,18 @@
                     border: 2px solid var(--primary-color);
                     background: #FFEBEB;
                     font-weight: 500;
-                    color: var(--primary-color);
                     display: block;
                     text-align: center;
                     padding: 17.5px;
-
+                    .zc_btn_text {
+                        color: var(--primary-color);
+                    }
                     &:hover {
-                        background: var(--primary-color);
-                        color: var(--white-color);
+                        .zc_btn_text {
+                            color: var(--white-color);
+                        }
+                        border-color: var(--heading-color);
+                        transition-delay: 350ms;
                     }
                 }
             }

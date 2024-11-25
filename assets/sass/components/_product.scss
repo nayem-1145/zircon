@@ -137,7 +137,9 @@
             background: #FFEBEB;
             border-radius: 50%;
             position: relative;
-
+            i {
+                color: var(--primary-color);
+            }
             svg {
                 path {
                     transition: all 350ms ease;
@@ -150,6 +152,9 @@
 
             &:hover svg path {
                 fill: var(--white-color);
+            }
+            &:hover i {
+                color: var(--white-color);
             }
 
             &::before {
@@ -675,8 +680,6 @@
             }
         }
     }
-
-    & .red-gray-color {}
 
     & .green-gray-color {
         & input[type="checkbox"] {
