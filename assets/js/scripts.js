@@ -1,5 +1,25 @@
+/*
+    1. Strech Image 
+    2. Sicky Headaer
+    3. Video Popup
+    4. Banner Carousel
+    5. zc3 Cagegory Tab
+    6. Preloader
+    7. Scroll to top Button
+    8. Coupon announcement
+    9. Best Selling Product Tab
+    10. Product Quentity 
+    11. Testimonial Carousel
+    12. Data Background Set
+    13. checkout toggle
+    14. NiceSelect
+    16. CART DRAWER
+    17. Range Slider
+    18. Split text
+*/
+
 /*==================================
-* Strech Image 
+1. Strech Image 
 ==================================*/
 function zc_stretch() {
     var windowWidth = window.innerWidth;
@@ -53,7 +73,7 @@ zc_stretch();
 window.addEventListener('resize', zc_stretch);
 
 /*==================================
-* Sicky Headaer
+2. Sicky Headaer
 ==================================*/
 window.addEventListener("scroll", function () {
     const scrollBar = window.scrollY;
@@ -69,7 +89,44 @@ window.addEventListener("scroll", function () {
 });
 
 /*==================================
-* Banner Carousel
+3. Video Popup
+==================================*/
+document.addEventListener('DOMContentLoaded', function () {
+    const videoPopupBtn = document.querySelector('.template-video-btn');
+    const videoPopup = document.getElementById('video-popup');
+    const popupClose = document.querySelector('.popup-close');
+    const popupVideo = document.getElementById('popup-video');
+
+    // Show popup and play video
+    videoPopupBtn.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        // Extract the video ID from the YouTube URL
+        const videoUrl = new URL(videoPopupBtn.getAttribute('href'));
+        const videoId = videoUrl.pathname.split('/').pop();
+        const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+        popupVideo.setAttribute('src', embedUrl);
+        videoPopup.style.display = 'flex';
+    });
+
+    // Close popup and stop video
+    popupClose.addEventListener('click', function () {
+        videoPopup.style.display = 'none';
+        popupVideo.setAttribute('src', '');
+    });
+
+    // Close popup when clicking outside the content area
+    videoPopup.addEventListener('click', function (event) {
+        if (event.target === videoPopup) {
+            videoPopup.style.display = 'none';
+            popupVideo.setAttribute('src', '');
+        }
+    });
+});
+
+/*==================================
+4. Banner Carousel
 ==================================*/
 var zcFeedbackSlide = new Swiper(".zc_feedback_slider", {
     loop: true,
@@ -307,7 +364,7 @@ zc3_author_carousel.controller.control = zc3_authorCnt_carousel;
 zc3_authorCnt_carousel.controller.control = zc3_author_carousel;
 
 /*==================================
-* zc3 Cagegory Tab
+5. zc3 Cagegory Tab
 ==================================*/
 window.addEventListener("load", function () {
     var myTabs = document.querySelectorAll("ul.zc3_category_nav > li");
@@ -368,7 +425,7 @@ var zc3pdCarousel = new Swiper(".zc3_product_carousel", {
 });
 
 /*==================================
-* Preloader
+6. Preloader
 ==================================*/
 window.addEventListener('load', function () {
     var preload = document.querySelector('.zc_preloader');
@@ -384,7 +441,7 @@ window.addEventListener('load', function () {
 });
 
 /*==================================
-* Scroll to top Button
+7 Scroll to top Button
 ==================================*/
 document.addEventListener("DOMContentLoaded", function () {
     const scrollTopBtn = document.querySelector(".scroll-top-btn");
@@ -410,46 +467,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 /*==================================
-* Mobile Menu
-==================================*/
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggler = document.querySelector(".zc3_header-toggle, .zn_header-toggle");
-    const closeButton = document.querySelector(".zc_mobile-menu .close");
-    const mobileMenu = document.querySelector(".zc_mobile-menu");
-
-    if (menuToggler) {
-        menuToggler.addEventListener("click", function () {
-            mobileMenu.classList.add("active");
-        });
-    }
-
-    if (closeButton) {
-        closeButton.addEventListener("click", function () {
-            mobileMenu.classList.remove("active");
-        });
-    }
-
-    document.querySelectorAll(".zc_mobile-menu ul li.has-submenu i").forEach(function (icon) {
-        icon.addEventListener("click", function () {
-            const submenu = this.nextElementSibling;
-            if (submenu) {
-                submenu.style.display = submenu.style.display === "none" ? "block" : "none";
-            }
-            this.classList.toggle("icon-rotate");
-        });
-    });
-
-    document.addEventListener("mouseup", function (e) {
-        if (mobileMenu && !mobileMenu.contains(e.target) && e.target !== mobileMenu) {
-            mobileMenu.classList.remove("active");
-        }
-    });
-});
-
-/*==================================
-* Coupon announcement
+8. Coupon announcement
 ==================================*/
 document.addEventListener("DOMContentLoaded", function () {
     const closeButton = document.querySelector(".zc_announce_close");
@@ -461,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /*==================================
-* Best Selling Product Tab
+9. Best Selling Product Tab
 ==================================*/
 function openFeatured(evt, featurName) {
     var i, tabcontent, tablinks;
@@ -481,7 +500,7 @@ function openFeatured(evt, featurName) {
 }
 
 /*==================================
-* Product Quentity
+10. Product Quentity
 ==================================*/
 if (document.querySelectorAll(".quantity").length > 0) {
     document.querySelectorAll(".ptPlus").forEach(function (button) {
@@ -570,7 +589,7 @@ var znFeaturedPd = new Swiper('.zn_featured_pd_carousel', {
 });
 
 /*==================================
-* Testimonial Carousel
+11. Testimonial Carousel
 ==================================*/
 var zntestimSwiper = new Swiper('.zn_testimonial-swipper', {
     loop: true,
@@ -606,7 +625,7 @@ var zntestimSwiper = new Swiper('.zn_testimonial-swipper', {
 
 
 /*==================================
-* Data Background Set
+12. Data Background Set
 ==================================*/
 document.querySelectorAll('[data-background]').forEach(function (element) {
     const backgroundUrl = element.getAttribute('data-background');
@@ -615,7 +634,7 @@ document.querySelectorAll('[data-background]').forEach(function (element) {
 
 
 /*==================================
-* checkout toggle
+13. checkout toggle
 ==================================*/
 document.querySelectorAll(".checkout-toggle-form").forEach(function (form) {
     const toggleBtn = form.querySelector(".form-toggle-btn");
@@ -642,13 +661,13 @@ var swiper = new Swiper(".zc_featuredProduct_slides", {
     },
     breakpoints: {
         480: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         576: {
-            slidesPerView: 2,
+            slidesPerView: 1,
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
         992: {
             slidesPerView: 3,
@@ -817,7 +836,7 @@ var znInnerFeedback = new Swiper(".zn_innerFeedback-slider", {
 
 
 /*==================================
-* NiceSelect 
+14. NiceSelect 
 ==================================*/
 document.addEventListener("DOMContentLoaded", function () {
     if (typeof NiceSelect === "undefined") {
@@ -830,8 +849,379 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// =====================
+//16. CART DRAWER SECTION START
+const cartDrawer = document.getElementById("cartDrawer");
+const cartDrawerCloseButton = document.getElementById(
+    "cartDrawerCloseButton"
+);
+const cartDrawerOpenButton = document.getElementById(
+    "cartDrawerOpenButton"
+);
+const inputRange = document.getElementById("cart-drawer-deals-input-range");
+const rangeSlide = document.getElementById("cart-drawer-deals-range");
+const cardDrawerDeals = document.getElementById("cardDrawerDeals");
+
+// Function to open the cart drawer
+function openCartDrawer() {
+    cartDrawer.classList.add("active");
+    handleOverlay({ show: true, action: closeCartDrawer });
+
+    const tl = gsap.timeline();
+    tl.from(cartDrawer.querySelector(".cart-drawer-header"), {
+    y: 100,
+    opacity: 0,
+    duration: 0.4,
+    ease: "power1.inOut",
+    })
+    .from(cartDrawer.querySelector(".cart-drawer-wrapper"), {
+        y: 100,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power1.inOut",
+    })
+    .from(cartDrawer.querySelector(".cart-drawer-footer"), {
+        y: 100,
+        opacity: 0,
+        duration: 0.4,
+        ease: "power1.inOut",
+    });
+}
+
+// Function to close the cart drawer
+function closeCartDrawer() {
+    cartDrawer.classList.remove("active");
+    handleOverlay({ show: false });
+}
+
+// Function to update range slide width
+function updateRangeSlide() {
+    rangeSlide.style.width = `${inputRange.value}%`;
+}
+
+// Function to toggle card drawer deals
+function toggleCardDrawerDeals() {
+    const dealsWrapper = cardDrawerDeals.querySelector(
+    ".cart-drawer-deals-rang-wrapper"
+    );
+
+    if (cardDrawerDeals.classList.contains("active")) {
+    gsap.to(dealsWrapper, {
+        height: 0,
+        duration: 0.4,
+        opacity: 1,
+        ease: "power1.inOut",
+        overflow: "hidden",
+    });
+    cardDrawerDeals.classList.remove("active");
+    } else {
+    cardDrawerDeals.classList.add("active");
+    gsap.to(dealsWrapper, {
+        height: "auto",
+        duration: 0.4,
+        opacity: 1,
+        ease: "power1.inOut",
+    });
+    }
+}
+
+// Initialize the cart drawer deals range
+gsap.set(cardDrawerDeals.querySelector(".cart-drawer-deals-rang-wrapper"), {
+    height: 0,
+    opacity: 0,
+});
+
+if (cardDrawerDeals.classList.contains("active")) {
+    gsap.set(
+    cardDrawerDeals.querySelector(".cart-drawer-deals-rang-wrapper"),
+    {
+        height: "auto",
+        opacity: 1,
+    }
+    );
+}
+
+// Event Listeners
+cartDrawerOpenButton.addEventListener("click", openCartDrawer);
+cartDrawerCloseButton.addEventListener("click", closeCartDrawer);
+inputRange.addEventListener("input", updateRangeSlide);
+cardDrawerDeals.addEventListener("click", toggleCardDrawerDeals);
+
+// CART DRAWER SUGGEST PRODUCTS SWIPER
+const swiperCart = new Swiper(".cart-drawer-suggest-products-wrapper", {
+    loop: true,
+    speed: 700,
+    slidesPerView: 1,
+    pagination: {
+    el: ".cart-drawer-suggest-products-pagination",
+    clickable: true,
+    },
+});
+
+
+// Function to handle the overlay visibility
+const handleOverlay = ({ show = false, action = () => {} }) => {
+const overlay = document.querySelector(".overlay");
+
+// HANDLE CLOSE OVERLAY
+const handleClose = () => {
+    overlay.classList.remove("active");
+    overlay.style.zIndex = "var(--overlay-z-index)";
+    document.body.style.overflowY = "visible";
+    document.body.style.overflowX = "hidden";
+    action();
+};
+
+// HANDLE OPEN
+const handleOpen = () => {
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+};
+
+// CONDITION
+if (show) {
+    handleOpen();
+} else {
+    handleClose();
+}
+
+overlay.addEventListener("click", () => {
+    if (show) {
+    handleClose();
+    }
+});
+};
+
+// Mobile Menu
+window.addEventListener("DOMContentLoaded", () => {
+gsap.registerPlugin(ScrollTrigger);
+
+(function () {
+    const productControllers = document.querySelectorAll(
+        ".product-quantity-controller"
+    );
+
+    productControllers &&
+        productControllers.forEach((controller) => {
+        let count = 1;
+        const decreaseButton = controller.querySelector(".decrease-quantity");
+        const increaseButton = controller.querySelector(".increase-quantity");
+        const productQuantity = controller.querySelector(".product-quantity");
+
+        // Set the initial quantity
+        productQuantity.value = count;
+
+        // Handle increase
+        increaseButton.addEventListener("click", () => {
+            count++;
+            productQuantity.value = count;
+        });
+
+        // Handle decrease
+        decreaseButton.addEventListener("click", () => {
+            if (count > 1) {
+            count--;
+            productQuantity.value = count;
+            }
+        });
+        });
+})();
+
+// Function to handle the overlay visibility
+const handleOverlay = ({ show = false, action = () => {} }) => {
+    const overlay = document.querySelector(".overlay");
+
+    // HANDLE CLOSE OVERLAY
+    const handleClose = () => {
+    overlay.classList.remove("active");
+    overlay.style.zIndex = "var(--overlay-z-index)";
+    document.body.style.overflowY = "visible";
+    document.body.style.overflowX = "hidden";
+    action();
+    };
+
+    // HANDLE OPEN
+    const handleOpen = () => {
+    overlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+    };
+
+    // CONDITION
+    if (show) {
+    handleOpen();
+    } else {
+    handleClose();
+    }
+
+    overlay.addEventListener("click", () => {
+    if (show) {
+        handleClose();
+    }
+    });
+};
+
+// =====================
+// MOBILE MENU SECTION START
+(function () {
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileMenuCloseButton = document.getElementById("mobileMenuCloseBtn");
+    const mobileMenuOpenButton = document.getElementById(
+    "mobileMenuOpenButton"
+    );
+    const mobileMenuItems = mobileMenu.querySelectorAll(".mobile-menu-items");
+    const mobileSubMenu = document.getElementById("mobileSubmenu");
+
+    // Set initial state of the mobile menu off-screen
+    gsap.set(mobileMenu, { xPercent: -110 });
+
+    // Open Menu Function
+    function openMobileMenu() {
+    handleOverlay({ show: true, action: closeMobileMenu });
+
+    // GSAP Open Timeline
+    const tl = gsap.timeline();
+    tl.to(mobileMenu, {
+        display: "block",
+        delay: 0.2,
+    })
+        .to(mobileMenu, {
+        xPercent: 0,
+        duration: 0.3,
+        ease: "power4.out",
+        })
+        .from(mobileMenu.querySelector(".header-mobile-menu"), {
+        y: -100,
+        duration: 0.5,
+        opacity: 0,
+        ease: "back.out(1.7)",
+        })
+        .fromTo(
+        mobileMenu.querySelectorAll(".mobile-menu-list > li"),
+        { xPercent: -100, opacity: 0 },
+        {
+            duration: 0.6,
+            opacity: 1,
+            xPercent: 0,
+            stagger: 0.1,
+            ease: "power4.out",
+        }
+        )
+        .from(mobileMenu.querySelector(".mobile-menu-footer"), {
+        y: 100,
+        duration: 0.3,
+        ease: "back.out(1.7)",
+        opacity: 0,
+        });
+    }
+
+    // Close Menu Function
+    function closeMobileMenu() {
+    // GSAP Close Timeline
+    const tlClose = gsap.timeline({
+        onComplete: () => handleOverlay({ show: false }), // Optional: Handle overlay close
+    });
+
+    // Slide the menu off-screen
+    tlClose
+        .to(mobileMenu, {
+        xPercent: -110,
+        duration: 0.7,
+        ease: "power4.in",
+        })
+        .set(mobileMenu, {
+        display: "none",
+        });
+    }
+
+    // Handle Menu Item Clicks
+    function handleMenuItemClick(item) {
+    item.addEventListener("click", () => {
+        const tl = gsap.timeline();
+        tl.to(mobileSubMenu, {
+        display: "block",
+        }).fromTo(
+        mobileSubMenu,
+        {
+            xPercent: -110,
+            opacity: 1,
+        },
+        {
+            xPercent: 0,
+            opacity: 1,
+            duration: 0.7,
+        }
+        );
+    });
+    }
+
+    // Handle Back Button Click on Submenu
+    function handleSubMenuBackButton() {
+    mobileSubMenu
+        .querySelector(".mobile-submenu-back-button")
+        .addEventListener("click", () => {
+        const tl = gsap.timeline();
+        tl.to(mobileSubMenu, {
+            xPercent: -110,
+            duration: 0.7,
+        });
+        });
+    }
+
+    // Event Listeners
+    mobileMenuOpenButton.addEventListener("click", openMobileMenu);
+    mobileMenuCloseButton.addEventListener("click", closeMobileMenu);
+    mobileMenuItems.forEach(handleMenuItemClick);
+    handleSubMenuBackButton();
+})();
+
+
+/* ------------------------------
+SELECT & OPTION  SECTION  START
+-------------------------------- */
+(function () {
+    const customSelect = document.querySelectorAll(".custom-select");
+
+        // CHECK CUSTOM SELECT EXIT
+        if (customSelect.length > 0) {
+        window.addEventListener("click", (e) => {
+            customSelect.forEach((item) => {
+            if (!item.contains(e.target)) {
+                item.classList.remove("open");
+            }
+            });
+        });
+
+        customSelect.forEach((item) => {
+            const selectBox = item.querySelector(".select-box");
+            const list = item.querySelector(".select-options-list");
+            const options = item.querySelectorAll(".option");
+            const selected = item.querySelector(".selected");
+
+            // CHECK SELECT BOX & LIST EXIT
+            if (selectBox && list) {
+            selectBox.addEventListener("click", () => {
+                item.classList.toggle("open");
+            });
+            }
+
+            // CHECK IF OPTION EXIST
+            if (options.length > 0) {
+            options.forEach((opt) => {
+                opt.addEventListener("click", () => {
+                if (selected) {
+                    selected.textContent = opt.textContent;
+                }
+                item.classList.remove("open");
+                });
+            });
+            }
+        });
+        }
+    })();
+}); // END DOM CONTENT LOADED
+
 /*==================================
-* Range Slider
+17. Range Slider
 ==================================*/
 window.onload = function () {
     slideOne();
@@ -869,7 +1259,7 @@ function fillColor() {
 }
 
 /*==================================
-* Split text animation
+18. Split text animation
 ==================================*/
 document.addEventListener('DOMContentLoaded', function () {
     const splitTextElements = document.querySelectorAll('.split-text');

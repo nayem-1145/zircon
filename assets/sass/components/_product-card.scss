@@ -197,6 +197,8 @@
 .quantity-box {
     padding: 10px 12px;
     border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
     button {
         width: 30px;
         height: 30px;
@@ -288,6 +290,9 @@
         border: 1px solid var(--color-border);
         transition: var(--transition-base);
         border-radius: 2px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         svg {
             path {
                 transition: var(--transition-base);

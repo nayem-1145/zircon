@@ -18,6 +18,20 @@
                 justify-content: center;
                 padding: 48px;
             }
+            .single-product-info {
+                .rating-star {
+                    li {
+                        i {
+                            color: #F9C221;
+                        }
+                    }
+                }
+            }
+        }
+        .single-product-features {
+            li {
+                color: inherit;
+            }
         }
     }
     @include screen-1400 {

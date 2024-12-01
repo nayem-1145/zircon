@@ -83,9 +83,26 @@
                 a {
                     display: inline-block;
                     color: inherit;
-
+                    position: relative;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        left: auto;
+                        bottom: 0;
+                        width: 0;
+                        height: 1px;
+                        background: var(--white-color);
+                        transition: var(--transition-base);
+                    }
                     &:hover {
                         color: var(--white-color);
+                        &::after {
+                            width: 100%;
+                            left: 0;
+                            right: auto;
+                        }
                     }
 
                     h3 {
@@ -258,9 +275,26 @@
             font-weight: 400;
             line-height: 25px;
             color: var(--body-color2);
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                left: auto;
+                right: 0;
+                bottom: 0;
+                width: 0;
+                height: 1px;
+                background: var(--primary-color3);
+                transition: var(--transition-base);
+            }
 
             &:hover {
                 color: var(--primary-color3);
+                &::after {
+                    width: 100%;
+                    left: 0;
+                    right: auto;
+                }
             }
         }
     }
@@ -502,9 +536,25 @@
         font-weight: 400;
         line-height: 25px;
         color: rgba(255, 255, 255, .7);
-
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: auto;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background: var(--white-color);
+            transition: var(--transition-base);
+        }
         &:hover {
             color: var(--white-color);
+            &::after {
+                width:100%;
+                left: 0;
+                right: auto;
+            }
         }
     }
 }

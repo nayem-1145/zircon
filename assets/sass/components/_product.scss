@@ -137,9 +137,8 @@
             background: #FFEBEB;
             border-radius: 50%;
             position: relative;
-            i {
-                color: var(--primary-color);
-            }
+            color: var(--primary-color);
+
             svg {
                 path {
                     transition: all 350ms ease;
@@ -301,14 +300,33 @@
 
     &:hover {
         & .zn_featured_pd_item__thumb {
-            & img:nth-child(1) {
-                opacity: 0;
-                visibility: hidden;
-            }
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                height: 100%;
 
-            & img:nth-child(2) {
-                opacity: 1;
-                visibility: visible;
+                & img:nth-child(1) {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+    
+                & img:nth-child(2) {
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
     }
@@ -331,6 +349,9 @@
         & i {
             font-size: 13.5px;
             color: #E0E0E0
+        }
+        i.full {
+            color: #F9C221;
         }
 
         & .zc3_totalReview {
@@ -494,17 +515,36 @@
 
     &:hover {
         & .zc3_product_item__thumbWrap {
-            & img {
-                &:nth-child(1) {
-                    opacity: 0;
-                    visibility: hidden;
-                }
-
-                &:nth-child(2) {
-                    opacity: 1;
-                    visibility: visible;
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                position: relative;
+                width: 100%;
+                height: 100%;
+                & img {
+                    &:nth-child(1) {
+                        opacity: 0;
+                        visibility: hidden;
+                    }
+    
+                    &:nth-child(2) {
+                        opacity: 1;
+                        visibility: visible;
+                    }
                 }
             }
+           
         }
     }
 }
@@ -528,7 +568,8 @@
         color: var(--primary-color2);
         border-radius: 2px;
         font-size: 18px;
-
+        border: 0;
+        outline: 0;
         & svg {
             fill: var(--primary-color2);
             width: 19px;
